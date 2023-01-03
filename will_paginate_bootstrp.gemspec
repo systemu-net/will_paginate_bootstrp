@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['Sergii Demianchuk']
   spec.email = 'sergeydemjanchyk@gmail.com'
   spec.summary = %q{Integrates Twitter Bootstrap pagination component with will_paginate gem}
-  spec.description = spec.summary
+  spec.description = %q{will_paginate_bootstrp provides Twitter Bootstrap pagination like design on top of will_paginate gem}
   spec.homepage = 'https://github.com/systemu-net/will_paginate_bootstrp'
   spec.license = 'MIT'
 
