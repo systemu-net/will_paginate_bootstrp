@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'will_paginate/view_helpers/action_view'
 
-module WillPaginateBootstrap
+module WillPaginatebootstrap
   class Renderer < ::WillPaginate::ActionView::LinkRenderer
     ELLIPSIS = "&hellip;" # hellip means horizontal ellipsis and is used to denote … (i.e. three dots)
     NEXT_LABEL = "&rarr;" # →
