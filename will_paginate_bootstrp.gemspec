@@ -9,14 +9,12 @@ Gem::Specification.new do |spec|
 
   spec.authors = ['Sergii Demianchuk']
   spec.email = 'sergeydemjanchyk@gmail.com'
-  spec.description = <<-DESCRIPTION
-    Gem will_paginate_bootstrp integrates the Twitter Bootstrap pagination component with the Gem will_paginate
-  DESCRIPTION
-  spec.summary = %q{Integrates the Twitter Bootstrap pagination component with will_paginate}
+  spec.summary = %q{Integrates Twitter Bootstrap pagination component with will_paginate gem}
+  spec.description = spec.summary
   spec.homepage = 'https://github.com/systemu-net/will_paginate_bootstrp'
   spec.license = 'MIT'
 
-  spec.files = Dir['lib/**/*.rb'] + Dir['bin/*']
+  spec.files = Dir['lib/**/*.rb'] + Dir['config/**/*.rb']
   spec.require_paths = ['lib']
   spec.test_files = spec.files.grep(/^spec/)
 
