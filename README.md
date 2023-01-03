@@ -5,7 +5,7 @@
 Add will_paginate_bootstrap to your Gemfile and `bundle install`.
 
 ```ruby
-gem "will_paginate_bootstrap", "~> 0.0.1"
+gem "will_paginate_bootstrap", "~> 0.2.1"
 ```
 
-## What is an will_paginate_bootstrap
+## What is will_paginate_bootstrap Gem

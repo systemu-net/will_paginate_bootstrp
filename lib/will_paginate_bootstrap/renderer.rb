@@ -2,10 +2,10 @@
 require 'will_paginate/view_helpers/action_view'
 
 module WillPaginateBootstrap
-  class Renderer < WillPaginate::ActionView::LinkRenderer
+  class Renderer < ::WillPaginate::ActionView::LinkRenderer
     ELLIPSIS = "&hellip;" # hellip means horizontal ellipsis and is used to denote … (i.e. three dots)
     NEXT_LABEL = "&rarr;" # →
-    PREVIOUS_LABEL = "&lArr;" # ←
+    PREVIOUS_LABEL = "&larr;" # ←
 
     def to_html
       html = pagination.map do |item|
@@ -35,7 +35,7 @@ module WillPaginateBootstrap
       if page
         tag(:li, link(text, page, link_options.merge(class: classname)), class: 'page-item')
       else
-        tag(:li, tag(:span, text, class: 'page-link'), class: 'page-item disabled')
+        tag(:li, tag(:span, text, class: classname), class: 'page-item disabled')
       end
     end
 
@@ -45,12 +45,12 @@ module WillPaginateBootstrap
 
     def previous_page
       num = @collection.current_page > 1 && @collection.current_page - 1
-      previous_or_next_page(num, @options[:previous_label], 'previous_page')
+      previous_or_next_page(num, @options[:previous_label], 'page-link')
     end
 
     def next_page
       num = @collection.current_page < @collection.total_pages && @collection.current_page + 1
-      previous_or_next_page(num, @options[:next_label], 'next_page')
+      previous_or_next_page(num, @options[:next_label], 'page-link')
     end
 
     def link_options
