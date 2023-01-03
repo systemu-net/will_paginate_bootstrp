@@ -6,6 +6,7 @@ require 'will_paginate_bootstrp/version'
 Gem::Specification.new do |spec|
   spec.name = 'will_paginate_bootstrp'
   spec.version = WillPaginateBootstrp::VERSION
+  spec.required_ruby_version = '>= 2.0'
 
   spec.authors = ['Sergii Demianchuk']
   spec.email = 'sergeydemjanchyk@gmail.com'
