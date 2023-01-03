@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'will_paginate/view_helpers/action_view'
-require 'will_paginatebootstrap/renderer'
+require 'will_paginate_bootstrp/renderer'
 
 module WillPaginate
   module ActionView
@@ -10,10 +10,10 @@ module WillPaginate
       collection ||= infer_collection_from_controller
 
       options = options.symbolize_keys
-      options[:renderer] ||= WillPaginatebootstrap::Renderer
+      options[:renderer] ||= WillPaginateBootstrp::Renderer
       options[:list_classes] ||= ['pagination']
-      options[:previous_label] ||= WillPaginatebootstrap::Renderer::PREVIOUS_LABEL
-      options[:next_label] ||= WillPaginatebootstrap::Renderer::NEXT_LABEL
+      options[:previous_label] ||= WillPaginateBootstrp::Renderer::PREVIOUS_LABEL
+      options[:next_label] ||= WillPaginateBootstrp::Renderer::NEXT_LABEL
 
       super(collection, options)
     end

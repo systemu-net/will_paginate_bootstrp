@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'will_paginatebootstrap/version'
+require 'will_paginate_bootstrp/version'
 require 'will_paginate'
 
-module WillPaginatebootstrap
+module WillPaginateBootstrp
   module WillPaginate
     class Engine < ::Rails::Engine
     end
