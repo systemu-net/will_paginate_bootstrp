@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.test_files = spec.files.grep(/^spec/)
 
-  spec.add_runtime_dependency 'will_paginate', '~> 3.0.0'
+  spec.add_runtime_dependency 'will_paginate', '~> 3.3.0'
 end
