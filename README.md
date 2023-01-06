@@ -1,5 +1,7 @@
 # will_paginate_bootstrp
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/46f6fac9a7f4b8a1ef0d/maintainability)](https://codeclimate.com/github/systemu-net/will_paginate_bootstrp/maintainability)
+
 ![Bootstrap Pagination Component](https://raw.githubusercontent.com/systemu-net/will_paginate_bootstrp/develop/pagination.png)
 
 This gem integrates the [Twitter Bootstrap pagination component][bs] with the [will_paginate][wp] pagination gem.
