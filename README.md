@@ -2,36 +2,36 @@
 
 ![Bootstrap Pagination Component](https://raw.githubusercontent.com/systemu-net/will_paginate_bootstrp/develop/pagination.png)
 
-This gem integrates the [Twitter Bootstrap pagination component](https://getbootstrap.com/docs/4.0/components/pagination/) with the [will_paginate](https://github.com/mislav/will_paginate) pagination gem.
+This gem integrates the [Twitter Bootstrap pagination component][bs] with the [will_paginate][wp] pagination gem.
 
-Right now only Rails is supported.
-## Install
+## Installation
 
-  * `gem install will_paginate-bootstrp`, *or*
-  * For projects using Bundler, add `gem 'will_paginate-bootstrp', '~> 0.3.1'` to your `Gemfile` (and then run `bundle install`).
+Add to your Gemfile:  
+
+    gem 'will_paginate_bootstrp'
 
 ## Usage
-
-### Rails
-
-  1. Load the Bootstrap CSS in your template:
-
-  2. In your view, use the `renderer: BootstrapPagination::Rails` option with the `will_paginate` helper, for example:
-
-```ruby
-<%= will_paginate @collection, renderer: WillPaginateBootstrp::Renderer %>
-```
-
-or just simply, because it is implicitly assumed to use `WillPaginateBootstrp::Renderer` by default.
 
 ```ruby
 <%= will_paginate @collection %>
 ```
 
-On the other hand, if You still would like to use Renderer from the [will_paginate](https://github.com/mislav/will_paginate) pagination gem, You can do so by:
+The following options are available (in addition to the options available in will_paginate):
 
-```ruby
-<%= will_paginate @collection, renderer: WillPaginate::ActionView::LinkRenderer %>
-```
+    :list_classes = ['pagination']   # Array of classes
+    :previous_label = '&larr;'       # Previous page label
+    :next_label = '&rarr;'           # Next page label
+
+For example, to place the navigation section to the center of the page, use this in your view:
+
+    <%= will_paginate @collection, list_classes: %w(pagination justify-content-center) %>
+
+Just like you would in the regular [will_paginate][wp].
+If you've got a need to use the default will_paginate stylings, pass an option like so:
+
+    <%= will_paginate @collection, renderer: WillPaginate::ActionView::LinkRenderer %>
 
 This is it :rocket:
+
+[wp]: http://github.com/mislav/will_paginate
+[bs]: https://getbootstrap.com/docs/4.0/components/pagination/
