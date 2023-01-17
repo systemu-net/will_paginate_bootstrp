@@ -7,6 +7,7 @@ module WillPaginateBootstrp
     ELLIPSIS = "&hellip;" # hellip means horizontal ellipsis and is used to denote … (i.e. three dots)
     NEXT_LABEL = "&rarr;" # →
     PREVIOUS_LABEL = "&larr;" # ←
+    CLASS_NAME = "pagination" # used as a default className
 
     def to_html
       html = pagination.map do |item|

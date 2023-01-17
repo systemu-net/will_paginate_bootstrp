@@ -11,7 +11,7 @@ module WillPaginate
 
       options = options.symbolize_keys
       options[:renderer] ||= WillPaginateBootstrp::Renderer
-      options[:list_classes] ||= ['pagination']
+      options[:list_classes] ||= [WillPaginateBootstrp::Renderer::CLASS_NAME]
       options[:previous_label] ||= WillPaginateBootstrp::Renderer::PREVIOUS_LABEL
       options[:next_label] ||= WillPaginateBootstrp::Renderer::NEXT_LABEL
 
