@@ -26,19 +26,15 @@ module WillPaginateBootstrp
     protected
 
     def page_number(page)
-      if page == current_page
-        tag(:li, tag(:span, page, class: 'page-link'), class: 'page-item active')
-      else
-        tag(:li, link(page, page, link_options.merge(class: 'page-link', rel: rel_value(page))), class: 'page-item')
-      end
+      return tag(:li, tag(:span, page, class: 'page-link'), class: 'page-item active') if page == current_page
+
+      tag(:li, link(page, page, link_options.merge(class: 'page-link', rel: rel_value(page))), class: 'page-item')
     end
 
     def previous_or_next_page(page, text, classname)
-      if page
-        tag(:li, link(text, page, link_options.merge(class: classname)), class: 'page-item')
-      else
-        tag(:li, tag(:span, text, class: classname), class: 'page-item disabled')
-      end
+      return tag(:li, link(text, page, link_options.merge(class: classname)), class: 'page-item') if page
+      
+      tag(:li, tag(:span, text, class: classname), class: 'page-item disabled')
     end
 
     def gap
